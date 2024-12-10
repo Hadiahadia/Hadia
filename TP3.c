@@ -8,20 +8,19 @@ typedef struct element {
 } element;
 
 // دالة لإنشاء قائمة فارغة
-element* creer Liste() {
-    return NULL;
+element* creerListe() {
+return NULL;
 }
 
 // دالة لإضافة عنصر إلى نهاية القائمة
-element* ajouterEnFin(element* liste, int valeur) {
-    element* nouveau = (element*)malloc(size of(element));
-    nouveau->val = valeur;
+element* ajouterEnFin(element* liste, int n) {
+    element* nouveau = (element*)malloc(sizeof(element));
+    nouveau->val= n;
     nouveau->suivant = NULL;
 
     if (liste== NULL) {
         return nouveau;
     }
-
     element* courant = liste;
     while (courant->suivant != NULL) {
         courant = courant->suivant;
